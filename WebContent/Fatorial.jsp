@@ -1,27 +1,6 @@
+<%@page import="br.feevale.Fatorial" %>
 <%
-	String nro = request.getParameter( "nro" );
-
-	long fatorial = 1;
-	int nrCalc = -1;
-	boolean calculouFatorial = false;
-	boolean deuRuim = false;
-	String msgErro = null;
-
-	if( nro != null ) {
-
-		try {
-			nrCalc = Integer.parseInt( nro );
-			
-			while( nrCalc > 1 ) {
-				fatorial = fatorial * nrCalc--;
-			}
-			
-			calculouFatorial = true;
-		} catch( Exception e ) {
-			deuRuim = true;
-			msgErro = "Não sei calcular o fatorial de '" + nro + "'";
-		}
-	}
+	Fatorial fat = new Fatorial( request.getParameter( "nro") );
 %><html>
 	<head>
 	    <title>Calculo do Fatorial</title>
@@ -35,15 +14,15 @@
 			<input type="submit" value="Calcular" />
 		</form>
 <%
-	if( calculouFatorial ) {
+	if( fat.isCalculouFatorial() ) {
 %>  <br /><br />
-	O Fatorial de <%=nro%> é igual a <%=fatorial%> 
+	O Fatorial de <%=fat.getNro()%> é igual a <%=fat.getFatorial()%> 
 <% } %>
 
 <%
-	if( deuRuim ) {
+	if( fat.isDeuRuim() ) {
 %>  <br /><br />
-	<span style="color: red;"><%=msgErro%></span> 
+	<span style="color: red;"><%=fat.getMsgErro()%></span> 
 <% } %>
 
 	</body>
