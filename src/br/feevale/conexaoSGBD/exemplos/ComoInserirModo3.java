@@ -53,14 +53,8 @@ public class ComoInserirModo3 {
 				System.out.println( e.getMessage() );
 				System.out.println( "Código de erro: " + e.getSQLState() );
 			}
-			
-			
 		} finally {
 			cnx.close();
 		}
-		
-		
-		
 	}
-
 }

@@ -36,9 +36,6 @@ public class ComoInserirModo1 {
 		} finally {
 			cnx.close();
 		}
-		
-		
-		
 	}
 
 }
