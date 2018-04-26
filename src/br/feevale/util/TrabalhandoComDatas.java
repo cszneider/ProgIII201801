@@ -29,6 +29,19 @@ public class TrabalhandoComDatas {
 		
 		Timestamp data = new Timestamp( diaAtual.getTimeInMillis() );
 		System.out.println( "Data no formato Timestamp: " + data.toString() );
+		
+		// Transformando de Timestamp para Calendar
+		
+		Calendar diaFuturo = Calendar.getInstance();
+		diaFuturo.setTimeInMillis( data.getTime() );
 	}
 
 }
+
+
+
+
+
+
+
+
