@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Parametros do Banco de Dados</comment>
+<entry key="driverJDBC">org.postgresql.Driver</entry>
+<entry key="senha">feevale</entry>
+<entry key="usuario">postgres</entry>
+<entry key="urlCnx">jdbc:postgresql://127.0.0.1:5432/PGIII201801</entry>
+</properties>
