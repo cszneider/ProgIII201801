@@ -11,9 +11,11 @@ import java.sql.Statement;
 public class Conexao {
 	
 	private Connection cnx;
+	private boolean livre;
 	
 	public Conexao() throws SQLException, IOException {
 
+		livre = true;
 		Parametros p = Parametros.getInstance();
 		String url = p.getParameter( "urlCnx" );
 		
@@ -37,4 +39,30 @@ public class Conexao {
 	public PreparedStatement prepareStatement( String cmd ) throws SQLException {
 		return cnx.prepareStatement( cmd );
 	}
+	
+	public void reserva() throws IOException {
+		if( livre ) {
+			livre = false;
+		} else {
+			throw new IOException( "A conexao já está sendo usada" );
+		}
+	}
+	
+	public void libera() {
+		livre = true;
+	}
+	
+	public boolean isLivre() {
+		return livre;
+	}
 }
+
+
+
+
+
+
+
+
+
+

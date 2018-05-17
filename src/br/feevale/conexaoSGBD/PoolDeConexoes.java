@@ -1,5 +1,6 @@
 package br.feevale.conexaoSGBD;
 
+import java.util.ArrayList;
 
 /* Tarefas:
  * 
@@ -12,8 +13,31 @@ package br.feevale.conexaoSGBD;
  *    . percorrer a lista de conexoes e liberar uma conexao que esteja livre 
  */
 public class PoolDeConexoes {
+	
+	private static PoolDeConexoes meuPool;
+	
+	private ArrayList<Conexao> listaConexoes;
+	
+	private PoolDeConexoes() {
+		listaConexoes = new ArrayList<Conexao>();
+	}
 
-	// mamae mandou eu escrever isto daqui
+	public static PoolDeConexoes getInstance() {
+		return null;
+	}
 	
-	
+	public synchronized Conexao getConexao() {
+		return null;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
