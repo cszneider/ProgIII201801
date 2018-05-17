@@ -5,9 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.sun.security.ntlm.Client;
-
-import br.feevale.classes.Cliente;
 /*
    quando algo (atributo ou um método) NAO é estático ele é individualizado
    por objeto.  Exemplo:
