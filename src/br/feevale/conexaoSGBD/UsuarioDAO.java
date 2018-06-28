@@ -1,5 +1,6 @@
 package br.feevale.conexaoSGBD;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -8,7 +9,7 @@ import java.util.List;
 
 public class UsuarioDAO {
 	
-	public static void insere( Usuario usuario ) throws SQLException {
+	public static void insere( Usuario usuario ) throws SQLException, IOException {
 		
 		PoolDeConexoes pool = PoolDeConexoes.getInstance();
 		Conexao cnx = pool.getConexao();
@@ -53,7 +54,7 @@ public class UsuarioDAO {
 		return null;
 	}
 	
-	public static Usuario getUsuarioPorEmail( String email ) throws SQLException {
+	public static Usuario getUsuarioPorEmail( String email ) throws SQLException, IOException {
 
 		PoolDeConexoes pool = PoolDeConexoes.getInstance();
 		Conexao cnx = pool.getConexao();

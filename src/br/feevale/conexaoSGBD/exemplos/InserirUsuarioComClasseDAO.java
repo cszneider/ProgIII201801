@@ -1,5 +1,6 @@
 package br.feevale.conexaoSGBD.exemplos;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.Calendar;
@@ -9,7 +10,7 @@ import br.feevale.conexaoSGBD.UsuarioDAO;
 
 public class InserirUsuarioComClasseDAO {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, IOException {
 		
 		Calendar dtNascimento = Calendar.getInstance();
 		dtNascimento.set( 1987, 10, 27 );

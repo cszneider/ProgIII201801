@@ -65,7 +65,7 @@ public class CEPServlet extends HttpServlet {
 			pw.flush();
 			
 		} catch( Exception e ) {
-			response.setStatus( HttpServletResponse.SC_INTERNAL_SERVER_ERROR );
+			response.setStatus( HttpServletResponse.SC_CONFLICT );
 		}
 	}
 
